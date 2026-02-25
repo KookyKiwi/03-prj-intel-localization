@@ -1,0 +1,150 @@
+background {
+  color: #00C7FD;
+  background: linear-gradient(90deg, #00C7FD 0%, #0081B9 100%);
+  padding: 20px;
+  text-align: center;
+}
+
+.hero {
+  height: 25em;
+  background-image: url("img/3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+}
+
+.logo {
+  width: 20%;
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+/* general page background */
+body {
+  background-color: #f0f0f0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  width: max-content;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 150px 40px;
+  scroll-behavior: smooth;
+  align-items: flex-start;
+  scroll-snap-type: x mandatory;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 155px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: black;
+  z-index: 1;
+}
+
+.timeline::-webkit-scrollbar {
+  display: none;
+}
+
+.timeline-card {
+  flex: 0 0 300px;
+  position: relative;
+  scroll-snap-align: center;
+}
+
+.card-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 15px;
+  height: 15px;
+  background: black;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.card-content {
+  background: linear-gradient(90deg, #00C7FD 0%, #0081B9 100%);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+p {
+  text-align: center;
+}
+
+p.card-content, h2, h3 {
+  color: black;
+}
+
+@media (max-width: 768px) {
+
+  .timeline {
+    flex-direction: column;   /* stack cards */
+    overflow-x: hidden;
+    overflow-y: visible;
+    padding: 40px 20px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .timeline::before {
+    top: 0;
+    left: 30px;     /* where the dots sit */
+    right: auto;
+
+    width: 2px;     /* vertical line */
+    height: 100%;
+
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .card-dot {
+    top: 90px;
+    left: 4px;
+    transform: none;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}
