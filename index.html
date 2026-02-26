@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap CSS (via CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous" />
 </head>
 <body>
 
@@ -39,7 +41,7 @@
         <h2>1968</h2>
         <h3>Intel Founded</h3>
         <!-- Add image -->
-        <p>
+        <p class="description">
           Robert Noyce and Gordon Moore rename the newly formed company 
           NM Electronics to Intel Corporation, laying the foundation for 
           decades of technological innovation.
@@ -54,7 +56,7 @@
         <h2>1971</h2>
         <h3>First Microprocessor</h3>
         <!-- Add image -->
-        <p>
+        <p class="description">
           Intel debuts the 4004, the world's first commercial microprocessor, 
           igniting the microprocessor revolution and propelling the future 
           of computing devices.
@@ -69,7 +71,7 @@
         <h2>1978</h2>
         <h3>8086 Processor</h3>
         <!-- Add image -->
-        <p>
+        <p class="description">
           Launch of the 8086 processor, establishing the x86 architecture 
           that drives countless PCs and servers in the modern era.
         </p>
@@ -83,7 +85,7 @@
           <h2>1985</h2>
           <h3>386 Processor</h3>
           <!-- Add image -->
-          <p>
+          <p class="description">
             Intel introduces the 386 processor with 32-bit architecture, 
             ushering in a new era of performance and multitasking for 
             personal computers.
@@ -98,7 +100,7 @@
         <h2>2006</h2>
         <h3>Peak GHG Emissions</h3>
         <!-- Add image -->
-        <p>
+        <p class="description">
           This year marks Intel's highest annual greenhouse gas emissions 
           for operations. Over subsequent years, Intel invests heavily in 
           chemical abatement, renewable energy, and energy-efficient 
@@ -113,7 +115,7 @@
     <div class="card-content">
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
-      <p>
+      <p class="description">
         Intel launches its RISE (Responsible, Inclusive, Sustainable, 
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
         progress on climate action, water stewardship, and waste reduction.
@@ -127,7 +129,7 @@
     <div class="card-content">
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
-      <p>
+      <p class="description">
         Intel announces its commitment to achieve net-zero greenhouse 
         gas emissions (Scope 1 and 2) across its global operations 
         by 2040, building on years of environmental initiatives.
@@ -141,7 +143,7 @@
     <div class="card-content">
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
-      <p>
+      <p class="description">
         The company achieves 99% renewable electricity usage worldwide, 
         helping to drastically lower carbon emissions and driving progress 
         toward Intel's long-term sustainability goals.
@@ -155,7 +157,7 @@
     <div class="card-content">
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
-      <p>
+      <p class="description">
         Intel hosts its first Sustainability Summit, uniting suppliers, 
         government officials, and industry leaders to collaborate on 
         next-generation sustainable semiconductor manufacturing.
@@ -163,6 +165,169 @@
     </div>
   </div>
   </section>
-  <p class="desktop-only">Use arrow keys to navigate the timeline!</p>
-</body>
-</html>
+
+  <!-- 3-Column Content Section -->
+  <section>
+    <div class="container">
+      <div class="row">
+
+        <!-- Column 1 (card) -->
+        <div class="col-12 col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-center">RISE Strategy</h5>
+              <p class="card-text text-start">
+                Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy,
+                Intel sets ambitious 2030 goals, including driving industry-wide
+                progress on climate action, water stewardship, and waste reduction.
+              </p>
+              <div class="mt-auto text-center">
+                <a href="#" class="btn btn-outline-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-12 col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-center">Commitment</h5>
+              <p class="card-text text-start">
+                In 2022, Intel pledged to achieve net-zero greenhouse gas emissions
+                (Scope 1 and 2) by 2040. This commitment builds on decades of
+                environmental initiatives and partnerships across the semiconductor
+                industry.
+              </p>
+              <div class="mt-auto text-center">
+                <a href="#" class="btn btn-outline-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-12 col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-center">Water &amp; Waste</h5>
+              <p class="card-text text-start">
+                Intel conserves billions of gallons of water annually and
+                collaborates with local communities to restore watersheds.
+                Intel also upcycles and recycles materials to reduce waste and
+                advance a circular economy.
+              </p>
+              <div class="mt-auto text-center">
+                <a href="#" class="btn btn-outline-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscription Form -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 col-lg-6 mx-auto">
+          <h2 class="text-center mb-3">Subscribe to our Newsletter</h2>
+
+          <form id="subscribeForm" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="subscriberName" class="form-label visually-hidden">Name</label>
+              <input type="text" class="form-control" id="subscriberName" placeholder="Your name (optional)">
+            </div>
+
+            <div class="mb-3">
+              <label for="subscriberEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="subscriberEmail" placeholder="name@example.com" required>
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="" id="consentCheck" required>
+              <label class="form-check-label" for="consentCheck">I agree to receive updates</label>
+              <div class="invalid-feedback">You must agree before subscribing.</div>
+            </div>
+
+            <div class="d-grid">
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+
+          <div id="subscribeMsg" class="mt-3" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <footer class="bg-light border-top mt-5">
+    <div class="container py-3">
+      <div class="row">
+        <div class="col text-center text-muted">
+          &copy; <span id="copyrightYear"></span> Intel. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('copyrightYear').textContent = new Date().getFullYear();</script>
+
+  <!-- Direction detection: switch `dir` based on `lang` and observe changes -->
+
+    <script>
+      (function () {
+        // Common RTL language codes (prefix match)
+        const RTL_LANG_PREFIXES = ['ar', 'he', 'fa', 'ur', 'ps', 'sd', 'ks', 'ku', 'dv', 'yi', 'ug', 'ckb'];
+
+        function isRtlLangCode(lang) {
+          if (!lang) return false;
+          const primary = String(lang).split('-')[0].toLowerCase();
+          return RTL_LANG_PREFIXES.indexOf(primary) !== -1;
+        }
+
+        function applyDirectionForLang(lang) {
+          const dir = isRtlLangCode(lang) ? 'rtl' : 'ltr';
+          const isRtl = dir === 'rtl';
+
+          // Set attribute so browser layout and built-in controls follow
+          document.documentElement.setAttribute('dir', dir);
+
+          // Add class hooks for project CSS
+          document.documentElement.classList.toggle('is-rtl', isRtl);
+          if (document.body) document.body.classList.toggle('is-rtl', isRtl);
+
+          // Expose and log for debugging
+          window.pageDirection = dir;
+          console.log('Applied page direction for lang', lang, '->', dir);
+        }
+
+        // Initialize from current lang attribute or `lang` property
+        const initialLang = document.documentElement.getAttribute('lang') || document.documentElement.lang || '';
+        applyDirectionForLang(initialLang);
+
+        // Observe changes to the `lang` attribute on <html>
+        const observer = new MutationObserver((mutations) => {
+          for (const m of mutations) {
+            if (m.type === 'attributes' && m.attributeName === 'lang') {
+              const newLang = document.documentElement.getAttribute('lang') || document.documentElement.lang || '';
+              applyDirectionForLang(newLang);
+            }
+          }
+        });
+
+        observer.observe(document.documentElement, { attributes: true });
+
+        // Provide a helper to manually toggle or update when needed
+        window.updateDirectionFromLang = function (lang) {
+          if (typeof lang === 'string') {
+            document.documentElement.setAttribute('lang', lang);
+            applyDirectionForLang(lang);
+          }
+        };
+      })();
+    </script>
+  </body>
+  </html>

@@ -1,8 +1,7 @@
-background {
-  color: #00C7FD;
-  background: linear-gradient(90deg, #00C7FD 0%, #0081B9 100%);
-  padding: 20px;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .hero {
@@ -40,39 +39,32 @@ background {
 
 /* general page background */
 body {
-  background-color: #f0f0f0;
-  margin: 0;
+  color: #000000;
+  background: linear-gradient(90deg, #00C7FD 0%, #0081B9 100%);
+  text-align: center;
   font-family: Arial, sans-serif;
 }
 
 .timeline {
-  position: relative;
   display: flex;
-  gap: 40px;
-  width: max-content;
+  flex-wrap: nowrap;
+  gap: 20px;
+  position: relative;
 
   overflow-x: auto;
-  overflow-y: hidden;
-  padding: 150px 40px;
-  scroll-behavior: smooth;
-  align-items: flex-start;
-  scroll-snap-type: x mandatory;
-}
+  padding: 10px;
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 155px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: black;
-  z-index: 1;
+  /* enable snap scrolling */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  scrollbar-width: none; /* firefox */
 }
 
 .timeline::-webkit-scrollbar {
   display: none;
 }
+
+
 
 .timeline-card {
   flex: 0 0 300px;
@@ -93,7 +85,7 @@ body {
 }
 
 .card-content {
-  background: linear-gradient(90deg, #00C7FD 0%, #0081B9 100%);
+  background: white;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
@@ -104,8 +96,12 @@ p {
   text-align: center;
 }
 
-p.card-content, h2, h3 {
+.description, h2, h3 {
   color: black;
+}
+
+.description {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -128,12 +124,7 @@ p.card-content, h2, h3 {
 
     width: 2px;     /* vertical line */
     height: 100%;
-
   }
-
-}
-
-@media (max-width: 768px) {
 
   .card-dot {
     top: 90px;
@@ -141,9 +132,6 @@ p.card-content, h2, h3 {
     transform: none;
   }
 
-}
-
-@media (max-width: 768px) {
   .desktop-only {
     display: none;
   }
